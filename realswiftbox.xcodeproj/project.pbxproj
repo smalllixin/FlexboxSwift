@@ -12,6 +12,12 @@
 		822A03601CC326210016620B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 822A035E1CC326210016620B /* Main.storyboard */; };
 		822A03621CC326210016620B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 822A03611CC326210016620B /* Assets.xcassets */; };
 		822A03651CC326210016620B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 822A03631CC326210016620B /* LaunchScreen.storyboard */; };
+		822A03771CC326370016620B /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822A036F1CC326370016620B /* Layout.swift */; };
+		822A03781CC326370016620B /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822A03701CC326370016620B /* Node.swift */; };
+		822A037A1CC326370016620B /* NodeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822A03731CC326370016620B /* NodeProtocol.swift */; };
+		822A037B1CC326370016620B /* View+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822A03751CC326370016620B /* View+Layout.swift */; };
+		822A037E1CC326610016620B /* NodeImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 822A037D1CC326610016620B /* NodeImpl.m */; };
+		822A03811CC326740016620B /* Layout.c in Sources */ = {isa = PBXBuildFile; fileRef = 822A037F1CC326740016620B /* Layout.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,16 @@
 		822A03611CC326210016620B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		822A03641CC326210016620B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		822A03661CC326210016620B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		822A036F1CC326370016620B /* Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
+		822A03701CC326370016620B /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		822A03731CC326370016620B /* NodeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeProtocol.swift; sourceTree = "<group>"; };
+		822A03741CC326370016620B /* SwiftBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftBox.h; sourceTree = "<group>"; };
+		822A03751CC326370016620B /* View+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+Layout.swift"; sourceTree = "<group>"; };
+		822A037C1CC326610016620B /* NodeImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeImpl.h; sourceTree = "<group>"; };
+		822A037D1CC326610016620B /* NodeImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeImpl.m; sourceTree = "<group>"; };
+		822A037F1CC326740016620B /* Layout.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Layout.c; sourceTree = "<group>"; };
+		822A03801CC326740016620B /* Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Layout.h; sourceTree = "<group>"; };
+		822A03821CC326EF0016620B /* Swiftbox-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swiftbox-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +54,7 @@
 		822A034E1CC326210016620B = {
 			isa = PBXGroup;
 			children = (
+				822A036C1CC326370016620B /* swiftbox */,
 				822A03591CC326210016620B /* realswiftbox */,
 				822A03581CC326210016620B /* Products */,
 			);
@@ -60,8 +77,25 @@
 				822A03611CC326210016620B /* Assets.xcassets */,
 				822A03631CC326210016620B /* LaunchScreen.storyboard */,
 				822A03661CC326210016620B /* Info.plist */,
+				822A03821CC326EF0016620B /* Swiftbox-Bridging-Header.h */,
 			);
 			path = realswiftbox;
+			sourceTree = "<group>";
+		};
+		822A036C1CC326370016620B /* swiftbox */ = {
+			isa = PBXGroup;
+			children = (
+				822A037F1CC326740016620B /* Layout.c */,
+				822A03801CC326740016620B /* Layout.h */,
+				822A037C1CC326610016620B /* NodeImpl.h */,
+				822A037D1CC326610016620B /* NodeImpl.m */,
+				822A036F1CC326370016620B /* Layout.swift */,
+				822A03701CC326370016620B /* Node.swift */,
+				822A03731CC326370016620B /* NodeProtocol.swift */,
+				822A03741CC326370016620B /* SwiftBox.h */,
+				822A03751CC326370016620B /* View+Layout.swift */,
+			);
+			path = swiftbox;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +169,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				822A037B1CC326370016620B /* View+Layout.swift in Sources */,
 				822A035D1CC326210016620B /* ViewController.swift in Sources */,
+				822A03781CC326370016620B /* Node.swift in Sources */,
+				822A03771CC326370016620B /* Layout.swift in Sources */,
+				822A037A1CC326370016620B /* NodeProtocol.swift in Sources */,
+				822A037E1CC326610016620B /* NodeImpl.m in Sources */,
 				822A035B1CC326210016620B /* AppDelegate.swift in Sources */,
+				822A03811CC326740016620B /* Layout.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +293,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lxtap.realswiftbox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "realswiftbox/Swiftbox-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -264,6 +305,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lxtap.realswiftbox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "realswiftbox/Swiftbox-Bridging-Header.h";
 			};
 			name = Release;
 		};
